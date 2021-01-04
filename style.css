@@ -45,3 +45,28 @@
     cursor:pointer;
     border: 1px solid black;
 }
+
+.footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    background-color: black;
+    padding: 10px;
+    height: 100px;
+}
+
+.footermenu{
+    margin: auto;
+
+}
+
+.footermenu a{
+    text-decoration: none;
+    color: white;
+    margin-left:15px;
+}
+

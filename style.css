@@ -11,7 +11,7 @@
 }
 
 .menu li{
-    margin-left:15px;
+    margin-left:30px;
     font-size:1.5rem;
 }
 
@@ -26,13 +26,22 @@
 }
 
 #login_button{
-    background-color:black;
-    color:white;
+    background-color:white;
+    color:black;
+    border:2px solid black;
     border-radius:50px;
-    border:none;
     outline:none;
     cursor:pointer;
-    height:60px;
+    height:54px;
     width:100px;
-    font-size:1.5rem;
+    font-size:1.2rem;
+    margin-top:20px;
+}
+
+#login_button:hover{
+    background-color:black;
+    color:white;
+    outline:none;
+    cursor:pointer;
+    border: 1px solid black;
 }

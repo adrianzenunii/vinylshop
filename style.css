@@ -1,0 +1,38 @@
+.header{
+    display:flex;
+    flex-direction:row;
+}
+
+.menu{
+    display:flex;
+    flex-direction:row;
+    list-style-type: none;
+    margin:auto;
+}
+
+.menu li{
+    margin-left:15px;
+    font-size:1.5rem;
+}
+
+.menu li a {
+    text-decoration:none;
+    color:black;
+}
+
+#logo{
+    max-width:200px;
+    max-height:200px;
+}
+
+#login_button{
+    background-color:black;
+    color:white;
+    border-radius:50px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    height:60px;
+    width:100px;
+    font-size:1.5rem;
+}

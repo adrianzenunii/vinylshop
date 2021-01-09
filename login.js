@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
                 setInputError(inputElement, "Username must be at least 10 characters in length");
             }if (e.target.id === "emailID" && e.target.value.length > 0 && e.target.value.length < 10) {
-                setInputError(inputElement, "Username must be at least 10 characters in length");
+                setInputError(inputElement, "Email must be at least 10 characters in length");
             }if (e.target.id === "passID" && e.target.value.length > 0 && e.target.value.length < 10) {
-                setInputError(inputElement, "Username must be at least 10 characters in length");
+                setInputError(inputElement, "Password must be at least 10 characters in length");
             }if (e.target.id === "confID" && e.target.value.length > 0 && e.target.value.length < 10) {
-                setInputError(inputElement, "Username must be at least 10 characters in length");
+                setInputError(inputElement, "Password must be at least 10 characters in length");
             }
         });
 

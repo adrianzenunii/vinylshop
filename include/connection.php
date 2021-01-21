@@ -1,17 +1,13 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
+$sname= "localhost";
+$unmae= "root";
 $password = "";
 
-try{
-    $conn = new PDO ("mysql : host=$servername;dbname=vinylshopdb", $username, $password);
+$db_name = "vinylshopdb";
 
+$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+
+if (!$conn) {
+	echo "Connection failed!";
 }
-
-catch(PDOException $e)
-{
-    echo "Connection failed: " . $e->getMessage();
-}
-
-?>

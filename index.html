@@ -9,32 +9,37 @@
     <title>Vinyl Shop</title>
   </head>
   <body>
-    <div class="header">
-      <img id="logo" src="./css/vinylshoplogo.png" alt="logo" />
-
-      <ul class="menu">
-        <li><a href="index.html">All Products</a></li>
-        <li><a href="#">Music</a></li>
+    <nav>
+      <div class="logo">
+        <img id="logo" src="./css/vinylshoplogo.png" alt="logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
         <li><a href="product.html">Product</a></li>
         <li><a href="contact.php">Contact</a></li>
+        <button id="login_button"><a href="login.html">Login</a></button>
       </ul>
 
-      <button id="login_button"><a href="login.html">Login</a></button>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="slider" style="width: 500px; margin: auto">
+      <div><img id="slider_photo" src="./css/vinyly.jpg" /></div>
+      <div><img id="slider_photo" src="./css/vinyly.jpg" /></div>
+      <div><img id="slider_photo" src="./css/vinyly.jpg" /></div>
     </div>
 
-
-      <div class="slider" style="width:500px; margin:auto;">
-        <div><img id="slider_photo" src="./css/vinyly.jpg" /></div>
-        <div><img id="slider_photo" src="./css/vinyly.jpg" /></div>
-        <div><img id="slider_photo" src="./css/vinyly.jpg" /></div>
-      </div>
-
-     <ul class="images">
+    <ul class="images">
       <div class="item">
         <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
           <ul>
-            <li> <a href="item.php"> Vinyl </a></li>
+            <li><a href="item.php"> Vinyl </a></li>
             <li>Cmimi: 15 EUR</li>
           </ul>
         </a>
@@ -42,9 +47,9 @@
 
       <div class="item">
         <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
           <ul>
-            <li> <a href="item.php"> Vinyl </a></li>
+            <li><a href="item.php"> Vinyl </a></li>
             <li>Cmimi: 15 EUR</li>
           </ul>
         </a>
@@ -52,9 +57,9 @@
 
       <div class="item">
         <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
           <ul>
-            <li> <a href="item.php"> Vinyl </a></li>
+            <li><a href="item.php"> Vinyl </a></li>
             <li>Cmimi: 15 EUR</li>
           </ul>
         </a>
@@ -62,31 +67,21 @@
 
       <div class="item">
         <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
           <ul>
-            <li> <a href="item.php"> Vinyl </a></li>
+            <li><a href="item.php"> Vinyl </a></li>
             <li>Cmimi: 15 EUR</li>
           </ul>
         </a>
       </div>
-     </ul>
+    </ul>
 
-        <ul class="images">
+    <ul class="images">
       <div class="item">
         <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
           <ul>
-            <li> <a href="item.php"> Vinyl </a></li>
-            <li>Cmimi: 15 EUR</li>
-          </ul>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven">
-          <ul>
-            <li> <a href="item.php"> Vinyl </a></li>
+            <li><a href="item.php"> Vinyl </a></li>
             <li>Cmimi: 15 EUR</li>
           </ul>
         </a>
@@ -94,9 +89,9 @@
 
       <div class="item">
         <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
           <ul>
-            <li> <a href="item.php"> Vinyl </a></li>
+            <li><a href="item.php"> Vinyl </a></li>
             <li>Cmimi: 15 EUR</li>
           </ul>
         </a>
@@ -104,14 +99,24 @@
 
       <div class="item">
         <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
           <ul>
-            <li> <a href="item.php"> Vinyl </a></li>
+            <li><a href="item.php"> Vinyl </a></li>
             <li>Cmimi: 15 EUR</li>
           </ul>
         </a>
       </div>
-     </ul>
+
+      <div class="item">
+        <a href="product.html">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
+          <ul>
+            <li><a href="item.php"> Vinyl </a></li>
+            <li>Cmimi: 15 EUR</li>
+          </ul>
+        </a>
+      </div>
+    </ul>
 
     <div class="footer">
       <p class="footermenu">
@@ -120,7 +125,7 @@
         <a href="#"><span class="label">Cookie Policy</span></a>
       </p>
     </div>
-
+    <script src="./js/burger-menu.js"></script>
     <script
       type="text/javascript"
       src="http://code.jquery.com/jquery-1.11.0.min.js"
@@ -130,7 +135,6 @@
       src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-
     <script>
       $(document).ready(function () {
         $(".slider").slick({});

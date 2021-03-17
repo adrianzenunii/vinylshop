@@ -9,6 +9,18 @@
     <title>Vinyl Shop</title>
   </head>
   <body>
+
+    <?php require_once 'process.php'; ?>
+
+    <?php
+    $mysqli = new mysqli('localhost','root','','onion')or die(mysqli_error($mysqli));
+    $result=$mysqli->query("SELECT * FROM product") or die($mysqli->error);
+
+
+
+    ?>
+
+
     <nav>
       <div class="logo">
         <img id="logo" src="./css/vinylshoplogo.png" alt="logo" />
@@ -18,7 +30,7 @@
         <li><a href="aboutUs.html">About</a></li>
         <li><a href="product.html">Product</a></li>
         <li><a href="contact.php">Contact</a></li>
-        <button id="login_button"><a href="login.html">Login</a></button>
+        <button id="login_button"><a href="login.php">Login</a></button>
       </ul>
 
       <div class="burger">
@@ -34,7 +46,67 @@
       <div><img id="slider_photo" src="./css/vinyly.jpg" /></div>
     </div>
 
-    <ul class="images">
+
+
+
+    <?php
+    $count=0;
+      while($row=mysqli_fetch_array($result)):
+        if($count==0){
+          echo '<ul class="images">';
+        }
+          $count++;
+
+     ?>
+
+
+      <div class="item">
+        <a href="product.html">
+          <?php echo '<img style="height:300px; width:300px;" class="img1" alt="Eleven" src="data:image/jpeg;base64,'.base64_encode($row['photo']).'"/>'; ?>
+          <ul>
+            <li><a href="item.php"> <?php echo $row['name'] ?> </a></li>
+            <li>Cmimi: <?php echo $row['price'] ?>  EUR</li>
+          </ul>
+        </a>
+      </div>
+
+
+      <!-- <div class="item">
+        <a href="product.html">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
+          <ul>
+            <li><a href="item.php"> Vinyl </a></li>
+            <li>Cmimi: 15 EUR</li>
+          </ul>
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="product.html">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
+          <ul>
+            <li><a href="item.php"> Vinyl </a></li>
+            <li>Cmimi: 15 EUR</li>
+          </ul>
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="product.html">
+          <img class="img1" src="./css/logo.png" alt="Eleven" />
+          <ul>
+            <li><a href="item.php"> Vinyl </a></li>
+            <li>Cmimi: 15 EUR</li>
+          </ul>
+        </a>
+      </div> -->
+
+  <?php endwhile; ?>
+
+  </ul>
+
+
+    <!-- <ul class="images">
       <div class="item">
         <a href="product.html">
           <img class="img1" src="./css/logo.png" alt="Eleven" />
@@ -74,49 +146,7 @@
           </ul>
         </a>
       </div>
-    </ul>
-
-    <ul class="images">
-      <div class="item">
-        <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven" />
-          <ul>
-            <li><a href="item.php"> Vinyl </a></li>
-            <li>Cmimi: 15 EUR</li>
-          </ul>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven" />
-          <ul>
-            <li><a href="item.php"> Vinyl </a></li>
-            <li>Cmimi: 15 EUR</li>
-          </ul>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven" />
-          <ul>
-            <li><a href="item.php"> Vinyl </a></li>
-            <li>Cmimi: 15 EUR</li>
-          </ul>
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="product.html">
-          <img class="img1" src="./css/logo.png" alt="Eleven" />
-          <ul>
-            <li><a href="item.php"> Vinyl </a></li>
-            <li>Cmimi: 15 EUR</li>
-          </ul>
-        </a>
-      </div>
-    </ul>
+    </ul> -->
 
     <div class="footer">
       <p class="footermenu">
